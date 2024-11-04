@@ -1,65 +1,35 @@
 /* src/styles.scss */
-@import '@angular/material/prebuilt-themes/indigo-pink.css'; // Example of a pre-built theme
+@import "@angular/material/prebuilt-themes/indigo-pink.css"; // Example of a pre-built theme
 
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.page-container {
+    margin-bottom: 20px; 
+    padding: 1px; 
+    border-radius: 5px; /* Rounded corners */
 
+    font-size: larger;
 
-// body {
-//   font-family: Arial, sans-serif;
-//   margin: 0;
-//   padding: 0;
-// }
+    .page-container-header {
+      margin-bottom: 20px; 
+      background-color: #f9f9f9; 
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      .page-container-header-text {
+        font-size: 1.5em;
+        padding-top: 20px;
+        padding-bottom: 15px;
+        padding-left: 5px;
+      }
+  }
+  .page-container-body {
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+}
 
-// // nav {
-// //   background-color: #f0f0f0;
-// //   padding: 10px;
-
-// //   a {
-// //     position: relative; /* Ensure the links are above other elements */
-// //     z-index: 1;
-// //     margin: 0 10px;
-// //     text-decoration: none;
-// //     color: #333;
-
-// //     &:hover {
-// //       color: #007bff;
-// //     }
-// //   }
-// // }
-
-// h1 {
-//   color: #333;
-// }
-
-// form {
-//   display: flex;
-//   flex-direction: column;
-
-//   label {
-//     margin-top: 10px;
-//   }
-
-//   input {
-//     padding: 8px;
-//     margin-top: 5px;
-//     font-size: 1em;
-//   }
-
-//   button {
-//     margin-top: 15px;
-//     padding: 10px;
-//     background-color: #007bff;
-//     color: white;
-//     border: none;
-//     cursor: pointer;
-
-//     &:hover {
-//       background-color: #0056b3;
-//     }
-//   }
-// }
-
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

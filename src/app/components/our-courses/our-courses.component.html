@@ -1,21 +1,25 @@
-<!-- course-list.component.html -->
-<div class="course-list-container">
-  <mat-accordion class="course-list">
-    <mat-expansion-panel *ngFor="let course of courses">
-      <mat-expansion-panel-header>
-        <div class="course-header">
-          <h3>{{ course.title }}</h3>
-          <p>{{ course.description }}</p>
-          <span class="course-duration">Duration: {{ course.duration }}</span>
+<div class="page-container">
+  <div class="page-container-header">
+    <div class="page-container-header-text">Our Courses</div>
+  </div>
+  <div class="page-container-body">
+    <mat-accordion class="course-list">
+      <mat-expansion-panel *ngFor="let course of courses">
+        <mat-expansion-panel-header>
+          <div class="course-header">
+            <h3>{{ course.title }}</h3>
+            <p>{{ course.description }}</p>
+            <span class="course-duration">Duration: {{ course.duration }}</span>
+          </div>
+        </mat-expansion-panel-header>
+        <div class="course-details">
+          <p><strong>Duration:</strong> {{ course.duration }}</p>
+          <p><strong>Content:</strong> {{ course.content }}</p>
+          <p><strong>Lab Time:</strong> {{ course.labTime }}</p>
+          <p><strong>Outcome:</strong> {{ course.outcome }}</p>
+          <button *ngIf="course.is_registration_open" mat-raised-button color="primary" (click)="register(course.course_code)">Register</button>
         </div>
-      </mat-expansion-panel-header>
-      <div class="course-details">
-        <p><strong>Duration:</strong> {{ course.duration }}</p>
-        <p><strong>Content:</strong> {{ course.content }}</p>
-        <p><strong>Lab Time:</strong> {{ course.labTime }}</p>
-        <p><strong>Outcome:</strong> {{ course.outcome }}</p>
-        <button mat-raised-button color="primary" (click)="register(course.title)">Register</button>
-      </div>
-    </mat-expansion-panel>
-  </mat-accordion>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
 </div>

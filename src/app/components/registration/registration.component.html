@@ -1,25 +1,10 @@
-<!-- src/app/components/registration/registration.component.html -->
-
-<!-- <h1>Class Registration</h1>
-<form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-
-  <label for="grade">Grade Level:</label>
-  <input type="text" id="grade" name="grade" required>
-
-  <button type="submit">Register</button>
-</form> -->
-<div class="form-container">
-  <iframe
+<div class="form-container" [ngSwitch] = "course_code">
+  <iframe *ngSwitchCase="'STUDENT_BEGINNER'"
     src="https://docs.google.com/forms/d/e/1FAIpQLSc8IBAcEUoYg7wmhcu11duEHy6oOXYwaPK6yY1rWQAbmgxKAw/viewform?embedded=true"
     width="100%"
     height="800"
-    frameborder="0"
-    marginheight="0"
-    marginwidth="0"
+
   >
     Loading…
   </iframe>
 </div>
-

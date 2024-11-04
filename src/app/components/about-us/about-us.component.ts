@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule,MatCardModule,CommonModule],
+  imports: [MatToolbarModule, MatButtonModule,MatCardModule,CommonModule, MatDividerModule],
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })
