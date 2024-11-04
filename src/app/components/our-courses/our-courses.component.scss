@@ -1,0 +1,53 @@
+/* course-list.component.css */
+.course-list-container {
+  display: flex;            /* Use flexbox for alignment */
+  justify-content: center;  /* Center horizontally */
+  align-items: flex-start;  /* Align items to the start vertically */
+  margin: 20px auto;       /* Center with margin */
+}
+
+.course-list {
+  width: 100%;             /* Full width for responsiveness */
+  max-width: 1000px;       /* Maximum width for the course list */
+}
+
+.mat-expansion-panel-header {
+  font-size: 1.25em;       /* Increase font size for the header */
+  padding: 35px;          /* Add padding for better spacing */
+}
+
+.course-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.course-header h3 {
+  margin: 0;
+
+  font-size: 1.25em; 
+}
+
+.course-header p {
+  margin: 0;
+  color: gray;
+}
+
+.course-duration {
+  font-size: 0.9em;
+  color: darkgray;
+}
+
+.course-details {
+  margin-top: 10px;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.mat-expansion-panel-content {
+  padding: 16px;          /* Add padding to content for better spacing */
+}
+
+button {
+  margin-top: 10px;  /* Add margin above the button */
+}

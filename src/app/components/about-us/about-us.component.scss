@@ -1,0 +1,22 @@
+/* course-list.component.css */
+.introduction {
+    margin-bottom: 20px;  /* Space below the introduction */
+    padding: 15px;        /* Padding for the introduction box */
+    background-color: #f9f9f9;  /* Light background color */
+    border-radius: 5px;   /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  }
+  
+  .introduction h2 {
+    margin-bottom: 10px;  /* Space below the heading */
+  }
+  
+  .introduction ul {
+    list-style-type: disc;  /* Use bullet points for the list */
+    padding-left: 20px;     /* Indent the list */
+  }
+  
+  .introduction li {
+    margin-bottom: 5px;    /* Space between list items */
+  }
+  
