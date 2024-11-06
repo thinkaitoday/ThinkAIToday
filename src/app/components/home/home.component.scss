@@ -11,18 +11,30 @@
   color: white;
   text-align: center;
   padding: 20px;
+
+  a {
+    color: #ff4081; /* Replace with your theme's accent color */
+  
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.5em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
-h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
 
-p {
-  font-size: 1.5em;
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 // .button-group {
 //   display: flex;
@@ -35,3 +47,6 @@ p {
 //   width: 200px; /* Optional: make the buttons a fixed width */
 //   align-self: center; /* Center-align the buttons in the flex column */
 // }
+
+
+
