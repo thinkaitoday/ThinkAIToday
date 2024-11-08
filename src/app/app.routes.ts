@@ -8,6 +8,7 @@ import { OurCoursesComponent } from './components/our-courses/our-courses.compon
 import { HomeComponent } from './components/home/home.component';
 import {LabStationComponent} from './components/lab-station/lab-station.component';
 import {NewsComponent} from './components/news/news.component';
+import {TriviaComponent} from './components/trivia/trivia.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,5 +18,6 @@ export const routes: Routes = [
   { path: 'our-courses', component: OurCoursesComponent },
   { path: 'home', component: HomeComponent },
   { path: 'lab-station', component: LabStationComponent },
-  { path: 'news', component: NewsComponent }
+  { path: 'news', component: NewsComponent },
+  { path: 'trivia', component: TriviaComponent }
 ];

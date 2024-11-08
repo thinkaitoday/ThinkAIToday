@@ -1,0 +1,21 @@
+<div class="page-container">
+    <div class="page-container-header">
+      <div class="page-container-header-text">AI Trivia</div>
+    </div>
+  
+    <div class="page-container-body">
+      <mat-card *ngFor="let trivia of selectedTrivia" class="trivia-card">
+        <mat-card-header>
+          <mat-card-title>{{ trivia.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ trivia.detail }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+    <div class="load-button-container">
+      <button mat-raised-button color="primary" (click)="loadRandomTrivia()">Load New Trivia</button>
+    </div>
+  </div>
+  
