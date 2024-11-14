@@ -3,15 +3,25 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { CommonModule } from '@angular/common';  // Import CommonModule
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, MatToolbarModule, MatButtonModule,MatCardModule],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    CommonModule  // Add CommonModule here
+  ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  flashNews: boolean = true;
 
   missionStatement: string = `
     At Think AI Today, we are dedicated to making knowledge of Artificial Intelligence, 
@@ -23,5 +33,4 @@ export class HomeComponent {
     in navigating the complexities of AI technology. Together, we can build a brighter future 
     where AI knowledge is a fundamental part of every individual's toolkit.
   `;
-
 }

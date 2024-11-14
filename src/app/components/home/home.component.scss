@@ -36,17 +36,32 @@
 
 
 
-// .button-group {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 10px; /* Space between buttons */
-//   margin-top: 20px;
-// }
+.flash-message {
+  margin-bottom: 2px;
 
-// button {
-//   width: 200px; /* Optional: make the buttons a fixed width */
-//   align-self: center; /* Center-align the buttons in the flex column */
-// }
+  mat-card {
+    background-color: #ff9900b4; // Bright background for visibility
+    border-left: 20px solid #ff9800;
+    color: #333;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 16px;
+      list-style-type: none;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      color: #1976d2; // Link color for visibility
+    }
+  }
+}
 
 
 

@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import {LabStationComponent} from './components/lab-station/lab-station.component';
 import {NewsComponent} from './components/news/news.component';
 import {TriviaComponent} from './components/trivia/trivia.component';
+import { LabComponent } from './components/lab/lab.component';
+import { QuizPollComponent } from './components/quiz-poll/quiz-poll.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,5 +21,7 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'lab-station', component: LabStationComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'trivia', component: TriviaComponent }
+  { path: 'trivia', component: TriviaComponent },
+  { path: 'participant-corner/lab', component: LabComponent },
+  { path: 'participant-corner/quiz-poll', component: QuizPollComponent },
 ];

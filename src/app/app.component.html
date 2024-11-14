@@ -17,6 +17,13 @@
       </a>
       <!-- <a mat-button routerLink="/lab-station">Lab Station</a> -->
       <!-- <a mat-button routerLink="/contact-us">Contact Us</a> -->
+      <mat-menu #participantCornerMenu="matMenu">
+        <button mat-menu-item [routerLink]="'/participant-corner/lab'">Lab</button>
+        <!-- <button mat-menu-item [routerLink]="'/participant-corner/quiz-poll'">Quiz & Poll Zone</button> -->
+        <button mat-menu-item (click)="openQuizPollZone()">Quiz & Poll Zone</button>
+      </mat-menu>
+      <!-- <a mat-button [matMenuTriggerFor]="participantCornerMenu">Participant Corner</a> -->
+
     </nav>
   </mat-toolbar-row>
 </mat-toolbar>
