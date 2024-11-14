@@ -17,7 +17,9 @@
   </mat-card>
 </section>
 
-<section class="hero">
+<section class="hero"
+  [ngClass]="{ 'hero-height-flash': flashNews }"
+>
   <!-- Existing hero section content -->
   <div>
     <h1>Unlock the Future: Generative AI Skills for Everyone</h1>
