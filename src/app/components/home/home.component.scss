@@ -32,6 +32,25 @@
     max-width: 600px;
     margin: 0 auto;
   }
+
+  button{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px 24px; /* Adjust padding for better spacing */
+    text-align: left;
+    border-radius: 4px; /* Slightly rounded corners */
+  
+    /* Add hover effects */
+    &:hover {
+      background-color: #e3f2fd; /* Light blue hover background */
+      color: #1976d2; /* Blue hover text color */
+  
+      mat-icon {
+        color: #1976d2;
+    }
+    }
+  
+  }
 }
 
 .hero-height-flash {

@@ -18,7 +18,12 @@ export class AppComponent {
 
   openQuizPollZone() {
     // window.open('https://www.mentimeter.com/46436087', '_blank');
-    window.open('https://www.menti.com/alhx81834d8s', '_blank');
+    window.open('https://www.menti.com/al3ocy7vjgtr', '_blank');
+  }
+
+  openGoogleMeet() {
+    // window.open('https://www.mentimeter.com/46436087', '_blank');
+    window.open('https://meet.google.com/ogz-xrus-hnk', '_blank');
   }
 
 }
