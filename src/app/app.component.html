@@ -25,9 +25,12 @@
           <button mat-menu-item (click)="openQuizPollZone()">
             <mat-icon>quiz</mat-icon> Quiz & Poll Zone
           </button>
-          <button mat-menu-item [routerLink]="'/participant-corner/lab'" (click)="closeSidenav()">
+          <button mat-menu-item (click)="openLab()">
             <mat-icon>biotech</mat-icon> Lab
           </button>
+          <!-- <button mat-menu-item [routerLink]="'/participant-corner/lab'" (click)="closeSidenav()">
+            <mat-icon>biotech</mat-icon> Lab
+          </button> -->
         </mat-menu>
         <a mat-button [matMenuTriggerFor]="participantCornerMenu" >Participant Corner</a>
         <a mat-button routerLink="/trivia" (click)="closeSidenav()">Trivia</a>
@@ -54,9 +57,12 @@
         <button mat-menu-item (click)="openQuizPollZone()">
           <mat-icon>quiz</mat-icon> Quiz & Poll Zone
         </button>
-        <button mat-menu-item [routerLink]="'/participant-corner/lab'" (click)="closeSidenav()">
+        <button mat-menu-item (click)="openLab()">
           <mat-icon>biotech</mat-icon> Lab
         </button>
+        <!-- <button mat-menu-item [routerLink]="'/participant-corner/lab'" (click)="closeSidenav()">
+          <mat-icon>biotech</mat-icon> Lab
+        </button> -->
       </mat-menu>
       <a mat-list-item [matMenuTriggerFor]="participantCornerMenu" (click)="closeSidenav()">Participant Corner</a>
     </mat-nav-list>

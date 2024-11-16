@@ -48,4 +48,9 @@ export class AppComponent implements AfterViewInit {
     window.open('https://meet.google.com/ogz-xrus-hnk', '_blank');
     this.closeSidenav();  // Close sidenav after the action
   }
+
+  openLab() {
+    window.open('http://4.255.25.222:8511', '_blank');
+    this.closeSidenav();  // Close sidenav after the action
+  }
 }
