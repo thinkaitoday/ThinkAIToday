@@ -1,10 +1,11 @@
 <div class="page-container">
+  <!-- Section for Students -->
   <div class="page-container-header">
-    <div class="page-container-header-text">Our Courses</div>
+    <div class="page-container-header-text">Courses for Students (Middle & High School)</div>
   </div>
   <div class="page-container-body">
     <mat-accordion class="course-list">
-      <mat-expansion-panel *ngFor="let course of courses">
+      <mat-expansion-panel *ngFor="let course of studentCourses">
         <mat-expansion-panel-header>
           <div class="course-header">
             <h3>{{ course.title }}</h3>
@@ -17,9 +18,48 @@
           <p><strong>Content:</strong> {{ course.content }}</p>
           <p><strong>Lab Time:</strong> {{ course.labTime }}</p>
           <p><strong>Outcome:</strong> {{ course.outcome }}</p>
-          <button *ngIf="course.is_registration_open" mat-raised-button color="primary" (click)="register(course.course_code)">Register</button>
+          <ng-container
+            *ngIf="course.is_registration_open; then show_registeration; else show_express_interest">
+          </ng-container>
+          <ng-template #show_registeration>
+            <button  mat-raised-button
+            color="primary"
+            (click)="register(course.course_code)"
+           
+          >
+            Register
+          </button>
+          </ng-template>
+          <ng-template #show_express_interest>
+            <button  mat-raised-button
+            color="primary"
+            (click)="expressInterest()"
+           
+          >
+            Express Interest
+          </button>
+          </ng-template>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
+  </div>
+
+  <!-- Section for Working Professionals -->
+  <div class="page-container-header">
+    <div class="page-container-header-text">Courses for Working Professionals</div>
+  </div>
+  <div class="page-container-body">
+    <div class="announcement">
+      <mat-icon class="announcement-icon" color="primary">info</mat-icon>
+      <span class="announcement-text">{{ professionalCoursesMessage }}</span>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="expressInterest()"
+      aria-label="Express interest in working professional courses"
+    >
+      Express Interest
+    </button>
   </div>
 </div>

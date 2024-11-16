@@ -11,6 +11,7 @@ import {NewsComponent} from './components/news/news.component';
 import {TriviaComponent} from './components/trivia/trivia.component';
 import { LabComponent } from './components/lab/lab.component';
 import { QuizPollComponent } from './components/quiz-poll/quiz-poll.component';
+import {GoogleFormComponent} from './components/google-form/google-form.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,4 +25,5 @@ export const routes: Routes = [
   { path: 'trivia', component: TriviaComponent },
   { path: 'participant-corner/lab', component: LabComponent },
   { path: 'participant-corner/quiz-poll', component: QuizPollComponent },
+  { path: 'form', component: GoogleFormComponent }
 ];

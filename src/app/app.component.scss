@@ -32,3 +32,82 @@ button[mat-menu-item] {
   }
 
 }
+/* src/app/app.component.scss */
+.header {
+  font-size: 1.75em;
+}
+
+a:hover {
+  background-color: #ffffff; /* Light blue hover background */
+  color: #1976d2; /* Blue hover text color */
+
+  mat-icon {
+    color: #1976d2;
+  }
+}
+
+button[mat-menu-item] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #424242; /* Default text color */
+  padding: 12px 24px; /* Adjust padding for better spacing */
+  text-align: left;
+  border-radius: 4px; /* Slightly rounded corners */
+
+  &:hover {
+    background-color: #e3f2fd; /* Light blue hover background */
+    color: #1976d2; /* Blue hover text color */
+
+    mat-icon {
+      color: #1976d2;
+    }
+  }
+}
+
+.mat-sidenav-container {
+  display: flex;
+  height: 100vh;
+}
+
+.mat-sidenav {
+  width: 250px;
+  background: #ffffff;
+  padding: 20px;
+}
+
+.mat-sidenav-content {
+  padding: 20px;
+}
+
+.mobile-menu-btn {
+  display: none;
+}
+
+.mobile-menu-text {
+  display: none;
+}
+
+.desktop-menu {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .mobile-menu-btn {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .mobile-menu-text {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-left: 10px;
+  }
+
+  .desktop-menu {
+    display: none;
+  }
+
+  .mat-sidenav {
+    width: 70%;
+  }
+}

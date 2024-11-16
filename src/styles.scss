@@ -1,36 +1,55 @@
-/* src/styles.scss */
-@import "@angular/material/prebuilt-themes/indigo-pink.css"; // Example of a pre-built theme
+@use '@angular/material' as mat;
+@import "@angular/material/prebuilt-themes/indigo-pink.css"; // Default Material theme
 
-html,
-body {
+
+// Define custom theme
+$custom-primary: mat.define-palette(mat.$indigo-palette);
+$custom-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$custom-warn: mat.define-palette(mat.$red-palette);
+
+$custom-theme: mat.define-light-theme((
+  color: (
+    primary: $custom-primary,
+    accent: $custom-accent,
+    warn: $custom-warn,
+  ),
+));
+
+@include mat.all-component-themes($custom-theme);
+
+html, body {
   height: 100%;
   font-size: 16px;
 }
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 .page-container {
-    margin-bottom: 20px; 
-    padding: 1px; 
-    border-radius: 5px; /* Rounded corners */
+  margin-bottom: 20px;
+  padding: 1px;
+  border-radius: 5px; /* Rounded corners */
+  font-size: larger;
 
-    font-size: larger;
-
-    .page-container-header {
-      margin-bottom: 20px; 
-      background-color: #f9f9f9; 
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-      .page-container-header-text {
-        font-size: 1.5em;
-        padding-top: 20px;
-        padding-bottom: 15px;
-        padding-left: 5px;
-      }
+  @media (max-width: 768px) {
+    padding: 5px; /* Adjust padding for smaller screens */
+    font-size: medium;
   }
-  .page-container-body {
-    padding-left: 20px; 
-    padding-right: 20px; 
-}
-}
 
+  .page-container-header {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    .page-container-header-text {
+      font-size: 1.8em; /* Enhance font size */
+      padding: 15px 10px;
+    }
+  }
+
+  .page-container-body {
+    padding: 10px;
+  }
+}
