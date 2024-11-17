@@ -4,11 +4,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatDividerModule} from '@angular/material/divider';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-about-us',
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule,MatCardModule,CommonModule, MatDividerModule],
+  imports: [MatToolbarModule, MatButtonModule,MatCardModule,CommonModule, MatDividerModule,RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './about-us.component.html',
   styleUrls: ['./about-us.component.scss']
 })

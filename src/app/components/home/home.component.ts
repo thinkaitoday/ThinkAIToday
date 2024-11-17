@@ -27,7 +27,7 @@ export class HomeComponent {
     // Automatically dismiss the flash message after 10 seconds
     setTimeout(() => {
       this.flashNews = false;
-    }, 20000);
+    }, 30000);
   }
 
   missionStatement: string = `

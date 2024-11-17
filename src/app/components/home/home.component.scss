@@ -58,12 +58,13 @@
 }
 
 .flash-message {
-  margin-bottom: 2px;
+  margin-bottom: 0px;
 
   mat-card {
     background-color: white;//#ff9900b4; // Bright background for visibility
     border-left: 20px solid #FF4081;
     color: #333;
+    border-radius: 0px;
 
     h2 {
       margin-top: 0;
