@@ -1,10 +1,10 @@
 <section class="flash-message" *ngIf="flashNews" > 
   <mat-card>
-    <mat-card-content>
-      <h2>📢 Upcoming Online Open House!</h2>
+    <mat-card-content >
+      <h2>📢 Join Us for our Next and Final Open House!</h2>
       <p>We invite you to join us for an Open House where you can learn more about our hands-on approach to teaching Generative AI.</p>
       <ul>
-        <li><strong>Date:</strong> Saturday, November 16, 2024</li>
+        <li><strong>Date:</strong> Saturday, November 30, 2024</li>
         <li><strong>Time:</strong> 6:00 PM - 7:00 PM EST</li>
         <li><strong>Location:</strong> <a href="https://meet.google.com/ogz-xrus-hnk" target="_blank">Google Meet</a></li>
       </ul>
@@ -27,6 +27,11 @@
     <br>
     <button mat-raised-button color="accent" routerLink="/registration">Get Started</button>
     <div><br></div>
-    <p>Have questions? Reach us via <a href="mailto:team@thinkaitoday.com">Email</a>.</p>
+    <p>
+      Have questions? Reach us via 
+      <a href="mailto:team@thinkaitoday.com">Email</a> or 
+      <a [routerLink]="['/form']" [queryParams]="{ code: 'CONTACT_US' }">Contact Us Form</a>
+    </p>
+    
   </div>
 </section>

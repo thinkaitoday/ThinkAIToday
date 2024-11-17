@@ -26,8 +26,8 @@ export class NewsComponent {
     // Initialize news updates with sanitized HTML after DomSanitizer is available
     this.newsUpdates = [
       {
-        title: 'Join Us for an Online Open House!',
-        date: 'November 14, 2024',
+        title: 'Join Us for our Next and Final Open House!',
+        date: 'November 17, 2024',
         content: 'We warmly invite you to join our upcoming Open House, whether you’ve registered or are still considering!',
         additionalDetails: this.sanitizeHtml(`
           <div>
@@ -35,13 +35,24 @@ export class NewsComponent {
   
             <h4>Open House Details:</h4>
             <ul>
-              <li>📅 Saturday, November 16, 2024</li>
+              <li>📅 Saturday, November 30, 2024</li>
               <li>⏰ 6:00 PM - 7:00 PM EST</li>
               <li>📍<a href="https://meet.google.com/ogz-xrus-hnk" target="_blank">Google Meet Link</a></li>
             </ul>
   
             <p>Don’t miss this opportunity to see how our course can benefit your child’s future!</p>
             <p>We look forward to connecting with you!</p>
+          </div>
+        `),
+        showMore: false
+      },
+      {
+        title: 'Our First Open House Concluded!',
+        date: 'November 16, 2024',
+        content: 'Thank you to everyone who joined our Open House event on Saturday, November 17, 2024.',
+        additionalDetails: this.sanitizeHtml(`
+          <div>
+          It was wonderful to connect with parents and students interested in Generative AI. Feel free to contact us with any questions!
           </div>
         `),
         showMore: false
