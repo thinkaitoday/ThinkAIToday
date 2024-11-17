@@ -21,7 +21,7 @@ import { CommonModule } from '@angular/common';  // Import CommonModule
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  flashNews: boolean = true;
+  flashNews: boolean = false;
 
   ngOnInit() {
     // Automatically dismiss the flash message after 10 seconds
