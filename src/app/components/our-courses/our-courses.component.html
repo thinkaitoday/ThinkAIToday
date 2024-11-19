@@ -1,7 +1,9 @@
 <div class="page-container">
   <!-- Section for Students -->
   <div class="page-container-header">
-    <div class="page-container-header-text">Courses for Students (Middle & High School)</div>
+    <div class="page-container-header-text">
+      Courses for Students (Middle & High School)
+    </div>
   </div>
   <div class="page-container-body">
     <mat-accordion class="course-list">
@@ -19,25 +21,33 @@
           <p><strong>Lab Time:</strong> {{ course.labTime }}</p>
           <p><strong>Outcome:</strong> {{ course.outcome }}</p>
           <ng-container
-            *ngIf="course.is_registration_open; then show_registeration; else show_express_interest">
+            *ngIf="
+              course.is_registration_open;
+              then show_registeration;
+              else show_express_interest
+            "
+          >
           </ng-container>
           <ng-template #show_registeration>
-            <button  mat-raised-button
-            color="primary"
-            (click)="register(course.course_code)"
-           
-          >
-            Register
-          </button>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="register(course.course_code)"
+            >
+              Register
+            </button>
           </ng-template>
           <ng-template #show_express_interest>
-            <button  mat-raised-button
-            color="primary"
-            (click)="expressInterest()"
-           
-          >
-            Express Interest
-          </button>
+            <p>
+              <b>Ready to Explore?</b>
+              Registration is not yet open, but you can
+              <a
+                [routerLink]="['/form']"
+                [queryParams]="{ code: 'COURSE_INTEREST' }"
+                >Express Interest</a
+              >
+              today to stay informed about course updates.
+            </p>
           </ng-template>
         </div>
       </mat-expansion-panel>
@@ -46,7 +56,9 @@
 
   <!-- Section for Working Professionals -->
   <div class="page-container-header">
-    <div class="page-container-header-text">Courses for Working Professionals</div>
+    <div class="page-container-header-text">
+      Courses for Working Professionals
+    </div>
   </div>
   <div class="page-container-body">
     <div class="announcement">
