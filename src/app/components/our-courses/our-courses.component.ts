@@ -48,7 +48,7 @@ export class OurCoursesComponent {
       content: 'Advanced techniques for generating AI-based content and artwork.',
       labTime: 'Supervised lab sessions to practice prompt optimization.',
       outcome: 'Students will create a portfolio-ready project.',
-      is_registration_open: true,
+      is_registration_open: false,
       is_free: false, // Paid course
     },
     {
