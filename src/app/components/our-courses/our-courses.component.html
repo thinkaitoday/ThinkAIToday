@@ -20,35 +20,29 @@
           <p><strong>Content:</strong> {{ course.content }}</p>
           <p><strong>Lab Time:</strong> {{ course.labTime }}</p>
           <p><strong>Outcome:</strong> {{ course.outcome }}</p>
-          <ng-container
-            *ngIf="
-              course.is_registration_open;
-              then show_registeration;
-              else show_express_interest
-            "
-          >
+
+          <!-- Registration Logic -->
+          <ng-container *ngIf="course.is_registration_open">
+            <ng-container *ngIf="course.is_free; else paidRegistration">
+              <button mat-raised-button color="primary" (click)="register(course.course_code)">
+                Register for Free
+              </button>
+            </ng-container>
+            <ng-template #paidRegistration>
+              <p>
+                <b>Paid Course:</b> Please pay via Zelle at 
+                <strong>payments&#64;thinkaitoday.com</strong> and 
+                <a [routerLink]="['/form']" [queryParams]="{ code: course.course_code }">complete the form</a>.
+              </p>
+            </ng-template>
           </ng-container>
-          <ng-template #show_registeration>
-            <button
-              mat-raised-button
-              color="primary"
-              (click)="register(course.course_code)"
-            >
-              Register
-            </button>
-          </ng-template>
-          <ng-template #show_express_interest>
+          <ng-container *ngIf="!course.is_registration_open">
             <p>
-              <b>Ready to Explore?</b>
-              Registration is not yet open, but you can
-              <a
-                [routerLink]="['/form']"
-                [queryParams]="{ code: 'COURSE_INTEREST' }"
-                >Express Interest</a
-              >
+              <b>Ready to Explore?</b> Registration is not yet open, but you can
+              <a [routerLink]="['/form']" [queryParams]="{ code: 'COURSE_INTEREST' }">Express Interest</a>
               today to stay informed about course updates.
             </p>
-          </ng-template>
+          </ng-container>
         </div>
       </mat-expansion-panel>
     </mat-accordion>

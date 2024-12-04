@@ -26,28 +26,27 @@ export class NewsComponent {
     // Initialize news updates with sanitized HTML after DomSanitizer is available
     this.newsUpdates = [
       {
-        title: 'Join Us for our Next and Final Open House!',
-        date: 'November 17, 2024',
-        content: 'We warmly invite you to join our upcoming Open House, whether you’ve registered or are still considering!',
+        title: 'Introduction to Generative AI classes starting soon!',
+        date: 'December 3, 2024',
+        content: 'We are excited to announce that the online classes for the Introduction to Generative AI course will begin on Friday, December 6, 2024.!',
         additionalDetails: this.sanitizeHtml(`
           <div>
-            <p>This event offers the perfect chance to meet us, ask questions, and learn about our hands-on approach to teaching Generative AI—a vital skill for today's world.</p>
-  
-            <h4>Open House Details:</h4>
+             
+            <h4>Details:</h4>
             <ul>
-              <li>📅 Saturday, November 30, 2024</li>
-              <li>⏰ 6:00 PM - 7:00 PM EST</li>
+              <li>📅 December 6, 2024, to December 21, 2024</li>
+              <li>⏰ 6:30 PM - 7:15 PM EST (Every Friday and Saturday)</li>
               <li>📍<a href="https://meet.google.com/ogz-xrus-hnk" target="_blank">Google Meet Link</a></li>
             </ul>
   
-            <p>Don’t miss this opportunity to see how our course can benefit your child’s future!</p>
-            <p>We look forward to connecting with you!</p>
+            <p>All relevant details about the class, including the Google Meet link, quizzes, and labs, can be accessed through the "Participant Corner" </p>
+            <p>We look forward to engaging with you in a fun, interactive journey to explore and build a strong foundation in Generative AI concepts.</p>
           </div>
         `),
         showMore: false
       },
       {
-        title: 'Our First Open House Concluded!',
+        title: 'Our First Open House Concluded',
         date: 'November 16, 2024',
         content: 'Thank you to everyone who joined our Open House event on Saturday, November 17, 2024.',
         additionalDetails: this.sanitizeHtml(`
@@ -58,7 +57,7 @@ export class NewsComponent {
         showMore: false
       },
       {
-        title: 'Welcome Email Sent – Check Your Inbox!',
+        title: 'Welcome Email Sent – Check Your Inbox',
         date: 'November 6, 2024',
         content: 'A Welcome email has been sent to all registrants of our Basic Generative AI course.',
         additionalDetails: this.sanitizeHtml(`
