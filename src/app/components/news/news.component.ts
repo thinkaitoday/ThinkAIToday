@@ -26,9 +26,9 @@ export class NewsComponent {
     // Initialize news updates with sanitized HTML after DomSanitizer is available
     this.newsUpdates = [
       {
-        title: 'Introduction to Generative AI classes starting soon!',
-        date: 'December 3, 2024',
-        content: 'We are excited to announce that the online classes for the Introduction to Generative AI course will begin on Friday, December 6, 2024.!',
+        title: 'Introduction to Generative AI Classes Have Begun!',
+        date: 'December 6, 2024',
+        content: 'We are excited to announce that the online classes for the Introduction have begun on Friday, December 6, 2024.!',
         additionalDetails: this.sanitizeHtml(`
           <div>
              
