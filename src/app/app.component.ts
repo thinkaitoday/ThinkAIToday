@@ -40,7 +40,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   openQuizPollZone() {
-    window.open('https://www.menti.com/alzd64ht64xh', '_blank');
+    window.open('https://www.menti.com/alwnjiz4tdmz', '_blank');
     this.closeSidenav();  // Close sidenav after the action
   }
 
